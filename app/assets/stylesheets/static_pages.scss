@@ -3,13 +3,16 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .h1 {
-	text-align: center;
 	font-size: 4rem;
 	font-family: Serif;
 	color: purple;
 }
 
 p {
-	text-align: center;
 	font-size: 2rem;
+	font-family: san-serif;
+}
+
+img {
+	border: 2px solid black;
 }
