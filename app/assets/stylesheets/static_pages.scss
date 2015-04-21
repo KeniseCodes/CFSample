@@ -40,7 +40,12 @@ nav {
 	color: black;
 }
 
-
+ul.nav.navbar-nav li form label {
+	margin-top: 15px;
+}
+ul.nav.navbar-nav.navbar-left li {
+	font-size: 2rem;
+}
 
 /********************************/
 /*           Jumbotron          */
@@ -70,8 +75,8 @@ nav {
 
 .fade-carousel .carousel-indicators > li {
     margin: 0 2px;
-    background-color: #f39c12;
-    border-color: #f39c12;
+    background-color: #48E5E5;
+    border-color: #48E5E5;
     opacity: .7;
 }
 
@@ -86,9 +91,23 @@ nav {
 }
 
 .carousel:hover .carousel-control {
-  visibility: visible;
+  visibility: hidden;
 }
 
 .carousel-inner .item .carousel-caption {
 	color: black !important;
+}
+
+
+/********************************/
+/*           Contact            */
+/********************************/
+
+.container.contact {
+	width: 40%;
+	margin: 0 auto;
+}
+
+.c-message {
+	margin-bottom: 40px;
 }

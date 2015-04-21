@@ -1,2 +1,31 @@
-<h1>StaticPages#contact</h1>
-<p>Find me in app/views/static_pages/contact.html.erb</p>
+<div class="container contact">
+	<div class="row">
+		<div class="col-xs-12 col-md-10 lg-col-10 col-centered">
+			<h3>Leave us a messsage.</h3>
+			<p class="c-message">We'll be sure to get back to you as soon as possible.</p>
+
+			<%= form_tag ("/static_pages/contact") do %>
+				
+				<div class="field">
+			    <%= label_tag :name %><br>
+			    <%= text_field_tag :name %>
+			  </div>
+				
+				<div class="field">
+			    <%= label_tag :email %><br>
+			    <%= text_field_tag :email %>
+			  </div>
+
+			  <div class="field">
+			    <%= label_tag :description %><br>
+			    <%= text_area_tag :description  %>
+			  </div>
+
+			  <div class="actions">
+			  	<%= submit_tag %>
+			  </div>
+
+		 <% end %>
+		</div>
+	</div>
+</div>
