@@ -1,31 +1,32 @@
 <div class="container contact">
-	<div class="row">
-		<div class="col-xs-12 col-md-10 lg-col-10 col-centered">
-			<h3>Leave us a messsage.</h3>
-			<p class="c-message">We'll be sure to get back to you as soon as possible.</p>
-
-			<%= form_tag ("/static_pages/contact") do %>
-				
-				<div class="field">
-			    <%= label_tag :name %><br>
-			    <%= text_field_tag :name %>
+	
+	<h3>Leave us a messsage.</h3>
+	<p class="c-message">We'll be sure to get back to you as soon as possible.</p>
+	
+	<%= flash[:notice] %>
+	<%= form_tag ("/static_pages/thank_you") do %>
+		<div class="row">
+			<div class="col-md-6">		
+				<div class="form-group">
+			    <%= label_tag :name, "Name" %><br>
+			    <%= text_field_tag :name, nil, class: "form-control", placeholder: "Name" %>
 			  </div>
 				
-				<div class="field">
-			    <%= label_tag :email %><br>
-			    <%= text_field_tag :email %>
+				<div class="form-group">
+			    <%= label_tag :email, "Email" %><br>
+			    <%= text_field_tag :email, nil, class: "form-control", placeholder: "Email" %>
 			  </div>
 
-			  <div class="field">
-			    <%= label_tag :description %><br>
-			    <%= text_area_tag :description  %>
+			  <div class="form-group">
+			    <%= label_tag :message, "Message" %><br>
+			    <%= text_area_tag :message, nil, class: "form-control", placeholder: "Enter Message"  %>
 			  </div>
 
 			  <div class="actions">
-			  	<%= submit_tag %>
+			  	<%= submit_tag "Send" %>
 			  </div>
-
-		 <% end %>
+			</div>
 		</div>
-	</div>
+ <% end %>
+
 </div>

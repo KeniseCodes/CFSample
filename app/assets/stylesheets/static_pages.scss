@@ -104,10 +104,29 @@ ul.nav.navbar-nav.navbar-left li {
 /********************************/
 
 .container.contact {
-	width: 40%;
+	width: 100%;
 	margin: 0 auto;
+	padding-left: 30%;
 }
 
 .c-message {
 	margin-bottom: 40px;
+}
+
+
+/********************************/
+/*         Thank You            */
+/********************************/
+
+.thkyou {
+	width: 100%;
+	margin: 0 auto;
+	padding-left: 30%;
+	padding-top: 5%;
+}
+
+#ty-message {
+	border: 3px solid black;
+	padding: 20px;
+	margin: 30px;
 }
