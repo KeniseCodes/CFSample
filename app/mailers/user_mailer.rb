@@ -1,6 +1,5 @@
-require "#{Rails.root}/app/mailers/user_mailer" 
 
-class UserMailer < ApplicationMailer::Base
+class UserMailer < ActionMailer::Base
   default from: "from@example.com"
 
   def contact_form(email, name, message)
