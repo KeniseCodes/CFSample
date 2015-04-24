@@ -1,3 +1,5 @@
+require "#{Rails.root}/app/mailers/user_mailer" 
+
 class UserMailer < ApplicationMailer::Base
   default from: "from@example.com"
 
