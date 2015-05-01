@@ -16,3 +16,14 @@
 .jumbotron {
 	margin-top: 52px;
 }
+
+.ctr-table {
+	margin: 0 auto;
+	padding: 10px;	
+}
+
+.col-centered {
+	display: block;
+	float: none;
+	margin: 0 auto;
+}

@@ -11,11 +11,23 @@ h1 {
 	text-align: center;
 }
 
+.center {
+	text-align: center;
+}
+
+
 .ctr-table {
 	margin: 0 auto;
 	padding: 10px;	
 }
 
-.center {
+.col-centered {
+	display: block;
+	float: none;
+	margin: 0 auto;
+}
+
+
+.text-ctr {
 	text-align: center;
 }
