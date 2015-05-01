@@ -28,32 +28,37 @@
         </div>  
 
         <div class="navbar-collapse collapse">
-          <ul class="nav navbar-nav navbar-right">
-            <li>
-              <%= form_tag("/products", method: "get") do %>
-                <%= label_tag(:q, "Search for:") %>
-                <%= text_field_tag(:q) %>
-                <%= submit_tag("Search") %>
-              <% end %>
-            </li>
-            <li><%= link_to 'About', static_pages_about_path %></li>
-            <li><%= link_to 'Products', products_path %></li>
-            <li><%= link_to 'Contact', static_pages_contact_path %></li>
-            <% if user_signed_in? %>
-            <li>
-            <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>        
-            </li>
-          <% else %>
-            <li>
-            <%= link_to('Login/Sign Up', new_user_session_path)  %>  
-            </li>
-          <% end %>
-          </ul> 
-          <ul class="nav navbar-nav navbar-left">
-            <li><%= link_to 'Aruba Kiteboards', root_path %></li>
-          </ul> 
+          <div class="row">
+          <div class="col-xs-12 col-md-4">
+            <ul class="nav navbar-nav navbar-left">
+              <li><%= link_to 'Aruba Kiteboards', root_path %></li>
+            </ul> 
+          </div>
+          <div class="col-xs-12 col-md-8">
+            <ul class="nav navbar-nav navbar-right">
+              <li>
+                <%= form_tag("/products", method: "get") do %>
+                  <%= label_tag(:q, "Search for:") %>
+                  <%= text_field_tag(:q) %>
+                  <%= submit_tag("Search") %>
+                <% end %>
+              </li>
+              <li><%= link_to 'About', static_pages_about_path %></li>
+              <li><%= link_to 'Products', products_path %></li>
+              <li><%= link_to 'Contact', static_pages_contact_path %></li>
+              <% if user_signed_in? %>
+              <li>
+              <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>        
+              </li>
+            <% else %>
+              <li>
+              <%= link_to('Login/Sign Up', new_user_session_path)  %>  
+              </li>
+            <% end %>
+            </ul> 
+          </div>
       </div> 
-
+      </div>
       </div>  
     </nav> <!-- End Nav -->
    
