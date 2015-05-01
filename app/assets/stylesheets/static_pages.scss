@@ -53,7 +53,7 @@ ul.nav.navbar-nav.navbar-left li {
 .jumbotron {
 	background: url("kbjumbotron.jpg") no-repeat center;
 	background-size: 100%;
-	height: 233px;
+	height: 100%;
 }
 
 /********************************/
@@ -129,4 +129,9 @@ ul.nav.navbar-nav.navbar-left li {
 	border: 3px solid black;
 	padding: 20px;
 	margin: 30px;
+}
+
+ctr-table {
+	margin: 0 auto;
+	padding: 10px;	
 }
