@@ -104,13 +104,9 @@ ul.nav.navbar-nav.navbar-left li {
 /********************************/
 
 .container.contact {
-	width: 100%;
+	width: 640px;
 	margin: 0 auto;
-	padding-left: 30%;
-}
-
-.c-message {
-	margin-bottom: 40px;
+	padding-bottom: 50px;
 }
 
 
@@ -135,3 +131,17 @@ ctr-table {
 	margin: 0 auto;
 	padding: 10px;	
 }
+
+
+/********************************/
+/*         USER PAGES           */
+/********************************/
+
+
+form.new_user {
+	width: 640px;
+	margin: 0 auto;
+	padding-bottom: 50px;
+
+}
+
