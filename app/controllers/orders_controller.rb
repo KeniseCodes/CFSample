@@ -3,7 +3,7 @@ before_action :set_order, only: [:show, :edit, :update, :destroy]
 before_filter :authenticate_user!
 	
 	def index 
-	
+		
 	end
 
 	def show
@@ -15,6 +15,7 @@ before_filter :authenticate_user!
 	end
 
 	def edit
+		@order = Order.find(params[:id])
 	end
 
 	def create 
