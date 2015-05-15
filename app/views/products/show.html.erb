@@ -26,6 +26,11 @@
 			
 			<%= render partial: 'new_comment' %>
 			<%= render partial: 'comments' %>
+			
+			<div class="pagination">
+			 <%= will_paginate @comments %>
+			</div>
+
 
 			<%= link_to 'Edit', edit_product_path(@product) %> |
 			<%= link_to 'Back', products_path %>
