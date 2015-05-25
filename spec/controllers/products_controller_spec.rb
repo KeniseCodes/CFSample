@@ -1,0 +1,23 @@
+require 'rails_helper'
+
+describe ProductsController, :type => :controller do
+  describe "GET #index" do
+    it "responds successfully with an HTTP 200 status code" do
+      get :index
+      expect(response).to be_success
+      expect(response).to have_http_status(200)
+    end
+
+    it "renders the index template" do
+      get :index
+      expect(response).to render_template("index")
+    end
+
+    it "responds with 404 if you go to a nonexistent page" do
+      #get :kdhkjdfg rescue nil
+      expect{ get :kdhkjdfg }.to raise_error
+    end    
+
+  end
+
+end

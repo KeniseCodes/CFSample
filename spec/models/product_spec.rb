@@ -11,29 +11,31 @@ describe Product do
 		end
 end
 
-
 describe Product do
 		before { @product = Product.new(name: nil) }
 
  	context "has no name" do
  		it "should not be valid" do
-			expect(@product.name).to raise_error
+			expect(@product.save).to eq false
 		end
 	end
 end 
 
+
 describe Product do
 
  	before {
- 		@product = Product.new
- 		@product.comments = Comment.new(
- 			body: "Awesome!",
- 			rating: [1, 3, 5])
- 	}
+ 		@product = Product.new(name: "test")
+ 		@product.save
+ 		Comment.new(body: "great", rating: 1, product_id: @product.id).save
+		Comment.new(body: "awesome", rating: 3, product_id: @product.id).save
+ 		Comment.new(body: "whatever", rating: 5, product_id: @product.id).save
+ 		#binding.pry
+ 			}
 
  	context "has several ratings" do
  		it "average_rating should equal the average" do
- 			expect(@product.comments.average_rating).to eq 3
+ 			expect(@product.average_rating).to eq 3
 			end
 		end
 end
