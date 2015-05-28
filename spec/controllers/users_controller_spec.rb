@@ -1,14 +1,14 @@
 require 'rails_helper'
+require 'controller_helper'
 
 describe UsersController, :type => :controller do
-
-  let :user do
-    User.create!(email: "me@home.com", password: "watching the telly")
-  end
-
-  before { sign_in user }
-
+ 
   describe "GET #index" do
+    before do
+     @user = create(:user)
+     sign_in @user
+    end
+
     it "responds successfully with an HTTP 200 status code" do
       get :index
       expect(response).to be_success
