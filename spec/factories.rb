@@ -1,8 +1,6 @@
 FactoryGirl.define do
 	
-	factory :contact do |f| 
-		f.firstname "Marie" 
-		f.lastname "Antoinette" 
+	factory :user do 
 		email "marie@france.com"
 		password "CakeCake"
 		admin false
