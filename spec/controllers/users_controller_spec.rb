@@ -1,13 +1,12 @@
 require 'rails_helper'
-#require 'controller_helper'
 
 describe UsersController, :type => :controller do
 
   describe "GET #index" do
     before :each do
       request.env["devise.mapping"] = Devise.mappings[:user]
-     #@user = User.create!(email: "me@home.com", password: "watching the telly")
-     @user = FactoryGirl.build(:user)
+     @user = User.create!(email: "me@home.com", password: "watching the telly")
+     
     end
 
     it "responds successfully with an HTTP 200 status code" do
