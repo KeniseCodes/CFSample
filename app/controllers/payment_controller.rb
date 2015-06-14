@@ -1,7 +1,6 @@
 class PaymentController < ApplicationController
 
 	Stripe.api_key = "sk_test_52yFIF5cD8nHTMERVrc0pZqs"
-	
 	def create
     token = params[:stripeToken]
     product = Product.find (params[:product_id])
