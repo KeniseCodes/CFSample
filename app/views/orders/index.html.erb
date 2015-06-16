@@ -1,1 +1,29 @@
-<h2 class="text-ctr">Order List</h2>
+
+<p id="notice"><%= notice %></p>
+
+<h1 class="text-ctr">Order List</h1>
+  <div class="row">
+    <div class="container product">
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Image url</th>
+            <th>Price</th>
+            <th colspan="4"></th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% @orders.each do |order| %>
+            <%= render order %>
+          <% end %>
+        </tbody>
+      </table>
+
+      <br>
+
+      <%= link_to 'New Order', new_order_path %>
+    </div>
+  </div>

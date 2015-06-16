@@ -1,17 +1,22 @@
-class PaymentController < ApplicationController
+class PaymentsController < ApplicationController
 
 	Stripe.api_key = "sk_test_52yFIF5cD8nHTMERVrc0pZqs"
+
 	def create
     token = params[:stripeToken]
-    product = Product.find (params[:product_id])
+    product = Product.find(params[:product_id]) rescue nil
+
   # Create the charge on Stripe's servers - this will charge the user's card
     begin
       charge = Stripe::Charge.create(
-        :amount => product.price_in_cents, # amount in cents, again
+        :amount => 40000, # amount in cents
         :currency => "usd",
         :source => token,
         :description => params[:stripeEmail]
     )
+
+    order = Order.create(user_id: user.id, product_id: product.id, total: order.total)
+    redirect_to order_url(order), notice: "You order has been processed"
 
     rescue Stripe::CardError => e
     # The card has been declined

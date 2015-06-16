@@ -22,5 +22,9 @@ load_and_authorize_resource
 	def create 
 		@order = Order.new(order_params)
 	end
+	
+	def check_out
+    render :check_out, layout: 'dashboard'
+  end  
 
 end

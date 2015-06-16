@@ -1,12 +1,30 @@
+<p id="notice"><%= notice %></p>
+
 <h3>Your order details:</h3>
 
-  <p>
-    Product name: <%= @order.product.name %>
-  </p>
-  <p>
-    Description: <%= @order.product.description %>
-  </p>
-  <p>
-    Colour: <%= @order.product.colour %>
-  </p>
-  
+<div class="container product">
+  <div class="row">
+    <div class="text-ctr">
+
+			<p>
+			  <strong>Name:</strong>
+			  <%= @order.product.name %>
+			</p>
+
+			<p>
+			  <strong>Description:</strong>
+			  <%= @order.product.description %>
+			</p>
+			
+			<p>
+			 <strong>Price:</strong>
+			  <%= @order.product.price %>
+			</p>
+
+			</div>
+		</div>
+
+			<%= link_to 'Edit', edit_product_path(@product) %> |
+			<%= link_to 'Back', products_path %>
+		
+</div>

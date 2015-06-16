@@ -17,9 +17,13 @@
 	margin-top: 52px;
 }
 
-
 .col-centered {
 	width: 800px;
 	margin: 0 auto;
 	padding-left: 10px;
 }
+
+.group {
+	margin: auto;
+}
+td, tr { padding: 0 10px;}
