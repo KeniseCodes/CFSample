@@ -8,7 +8,7 @@ load_and_authorize_resource
 	end
 
 	def show
-		@order = Order.find(params[:id])
+		@order = Order.find_by_id(params[:id])
 	end
 
 	def new
@@ -20,7 +20,8 @@ load_and_authorize_resource
 	end
 
 	def create 
-		@order = Order.new(order_params)
+		@order = Order.new(params[:id])
+		@order.save
 	end
 
 	private
@@ -28,7 +29,7 @@ load_and_authorize_resource
   def set_order
       @order = Order.find(params[:id])
     end
-    
+
 	def order_params
         params.require(:order).permit(:user_id, :product_id, :total)
     end
