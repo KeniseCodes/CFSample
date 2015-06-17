@@ -13,7 +13,7 @@ Rails.application.routes.draw do
 
   post 'static_pages/thank_you'
 
-  post 'payments/create' => 'payments#create'
+  post '/payments/create' => 'payments#create'
 
   get 'orders' => 'orders#show'
 

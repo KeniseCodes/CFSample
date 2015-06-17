@@ -4,7 +4,7 @@ before_action :set_order, only: [:show, :edit, :update, :destroy]
 load_and_authorize_resource
 	
 	def index 
-		
+		@order = Order.all
 	end
 
 	def show
@@ -16,15 +16,20 @@ load_and_authorize_resource
 	end
 
 	def edit
-		@order = Order.find(params[:id])
+		
 	end
 
 	def create 
 		@order = Order.new(order_params)
 	end
-	
-	def check_out
-    render :check_out, layout: 'dashboard'
-  end  
 
+	private
+  
+  def set_order
+      @order = Order.find(params[:id])
+    end
+    
+	def order_params
+        params.require(:order).permit(:user_id, :product_id, :total)
+    end
 end

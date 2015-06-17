@@ -1,30 +1,30 @@
 <p id="notice"><%= notice %></p>
 
-<h3>Your order details:</h3>
+
 
 <div class="container product">
   <div class="row">
     <div class="text-ctr">
-
+			<h3>Your Order Details:</h3>
+			<br>
 			<p>
 			  <strong>Name:</strong>
-			  <%= @order.product.name %>
+			  <%= @user_id %>
 			</p>
 
 			<p>
 			  <strong>Description:</strong>
-			  <%= @order.product.description %>
+			  <%= @product_id %>
 			</p>
 			
 			<p>
 			 <strong>Price:</strong>
-			  <%= @order.product.price %>
+			  <%= (@order.total/100) %>
 			</p>
 
 			</div>
 		</div>
 
-			<%= link_to 'Edit', edit_product_path(@product) %> |
-			<%= link_to 'Back', products_path %>
+			<%= link_to 'Back', orders_path %>
 		
 </div>

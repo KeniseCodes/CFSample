@@ -16,14 +16,13 @@
         </thead>
 
         <tbody>
-          <% @orders.each do |order| %>
-            <%= render order %>
+          <% @order.each do |order| %>
+            <%= render partial: "order" %>
           <% end %>
+            
         </tbody>
       </table>
 
       <br>
-
-      <%= link_to 'New Order', new_order_path %>
     </div>
   </div>
