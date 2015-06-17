@@ -16,7 +16,7 @@ class PaymentsController < ApplicationController
     )
 
     order = Order.create(product_id: product, user_id: current_user, total: charge.amount)
-    redirect_to order_url(order), notice: "You order has been processed"
+    #redirect_to order_url(order), notice: "You order has been processed"
 
     rescue Stripe::CardError => e
     # The card has been declined

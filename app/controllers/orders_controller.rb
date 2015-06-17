@@ -8,7 +8,7 @@ load_and_authorize_resource
 	end
 
 	def show
-		@order = Order.find_by_id(params[:id])
+		@orders = Order.find(params[:id]).first
 	end
 
 	def new
@@ -20,8 +20,9 @@ load_and_authorize_resource
 	end
 
 	def create 
-		@order = Order.new(params[:id])
-		@order.save
+		@product = Product.find(params[:product_id])
+		@order = Order.new(order_params)
+		@order.user = current_user
 	end
 
 	private
