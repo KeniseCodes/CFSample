@@ -32,6 +32,6 @@ module Firstapp
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
     config.filter_parameters << :password
-    config.force_ssl = true
+    #config.force_ssl = true
   end
 end

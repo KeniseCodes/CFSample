@@ -17,7 +17,7 @@ Rails.application.routes.draw do
 
   post '/payments/create' => 'payments#create'
 
-  post 'orders/show' => 'orders#show'
+  get 'orders' => 'orders#show'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

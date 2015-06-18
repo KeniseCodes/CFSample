@@ -5,7 +5,7 @@
   <td><%= @user_id %></td>
   <td><%= @product_id %></td>
   <td><%= @total %></td>
-  <td><%= link_to 'Show', controller: "orders", action: "show", id: @order %></td>
+  <td><%= link_to 'Show', '/orders/#{@order.id}' %></td>
 </tr>
 
 </div>

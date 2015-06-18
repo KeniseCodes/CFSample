@@ -8,7 +8,7 @@ load_and_authorize_resource
 	end
 
 	def show
-		@orders = @current_user.orders.find(params[:id])
+		@order = Order.find(params[:id]) #rescue nil	
 	end
 
 	def new
@@ -21,14 +21,15 @@ load_and_authorize_resource
 
 	def create 
 		@product = Product.find(params[:product_id])
-		@order = Order.new(order_params)
-		@order.user = current_user
+	  @user = current_user
+		@order = Order.new(params[:order])
+		@order.save
 	end
 
 	private
   
   def set_order
-      @order = Order.find(params[:id])
+  	@order = Order.find(params[:id])
     end
 
 	def order_params
