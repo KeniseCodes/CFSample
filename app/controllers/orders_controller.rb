@@ -8,7 +8,7 @@ load_and_authorize_resource
 	end
 
 	def show
-		@orders = Order.find(params[:id]).first
+		@orders = @current_user.orders.find(params[:id])
 	end
 
 	def new
