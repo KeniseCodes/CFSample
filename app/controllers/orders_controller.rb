@@ -1,5 +1,5 @@
 class OrdersController < ApplicationController
-before_action :set_order, only: [:show, :edit, :update, :destroy]
+before_action only: [:show, :edit, :update, :destroy]
 #before_filter :authenticate_user!
 load_and_authorize_resource
 	
@@ -8,7 +8,7 @@ load_and_authorize_resource
 	end
 
 	def show
-		@order = Order.find(params[:id]) #rescue nil	
+		@order = Order.find_by_id(params[:id]) #rescue nil	
 	end
 
 	def new
@@ -20,17 +20,17 @@ load_and_authorize_resource
 	end
 
 	def create 
-		@product = Product.find(params[:product_id])
-	  @user = current_user
-		@order = Order.new(params[:order])
-		@order.save
+	#3@product = Product.find(params[:product_id])
+	 # @user = current_user
+		#@order = Order.new(params[:order])
+		#@order.save
 	end
 
 	private
   
-  def set_order
-  	@order = Order.find(params[:id])
-    end
+  #def set_order
+  #	@order = Order.find(params[:id])
+   # end
 
 	def order_params
         params.require(:order).permit(:user_id, :product_id, :total)

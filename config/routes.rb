@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :products do
     resources :comments
   end
-  resources :orders, only: [:index, :show, :new, :create]
+  resources :orders, only: [:index, :show]
   resources :payments, only: [:create]
 
   get 'static_pages/about'
@@ -17,7 +17,8 @@ Rails.application.routes.draw do
 
   post '/payments/create' => 'payments#create'
 
-  get 'orders' => 'orders#show'
+  get '/orders' => 'orders#index'
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
