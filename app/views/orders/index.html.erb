@@ -16,8 +16,8 @@
         </thead>
 
         <tbody>
-          <% @order.each do |order| %>
-            <%= render partial: "order" %>
+          <% @orders.each do |order| %>
+            <%= render order %>
           <% end %>
             
         </tbody>
