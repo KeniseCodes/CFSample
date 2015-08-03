@@ -12,7 +12,11 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-
+  <script type="text/javascript">
+  // This identifies your website in the createToken call below
+  Stripe.setPublishableKey('pk_test_U6okaKwsL3Rg5Naz0InKq5nE');
+  // ...
+</script>
 
 </head>
 <body data-spy="scroll" data-target=".navbar">
