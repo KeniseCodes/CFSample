@@ -27,3 +27,8 @@
 	margin: auto;
 }
 td, tr { padding: 0 10px;}
+
+.thumbnail {
+	width: 250px;
+  height: 250px;
+}
