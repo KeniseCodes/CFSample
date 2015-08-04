@@ -29,6 +29,6 @@
 td, tr { padding: 0 10px;}
 
 .thumbnail {
-	width: 250px;
-  height: 250px;
+	max-width: 200px;
+  max-height: 200px;
 }
