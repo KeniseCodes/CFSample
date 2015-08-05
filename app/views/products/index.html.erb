@@ -16,11 +16,15 @@
           </tr>
         </thead>
 
-        <tbody>
-          <% @products.each do |product| %>
-            <%= render product %>
-          <% end %>
-        </tbody>
+         <% cache do %> 
+          <tbody>
+            <% @products.each do |product| %>
+             <% cache (product) do %>
+                <%= render product %>
+              <% end %>
+            <% end %>
+          </tbody>
+        <% end %>
       </table>
 
       <br>
