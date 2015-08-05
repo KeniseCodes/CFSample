@@ -34,6 +34,9 @@ gem 'will_paginate', '~> 3.0.6'
 # gem 'capistrano-rails', group: :development
 gem 'factory_girl_rails'
 gem 'stripe'
+gem 'dalli'
+gem 'memcachier'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
