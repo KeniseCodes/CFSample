@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   resources :users
+  resources :charges
   resources :products do
     resources :comments
   end
@@ -17,7 +18,7 @@ Rails.application.routes.draw do
 
   post '/payments/create' => 'payments#create'
 
-  get '/orders' => 'orders#index'
+  get '/orders' => 'orders#show'
 
 
   # The priority is based upon order of creation: first created -> highest priority.
