@@ -3,7 +3,7 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
 $(document).ready ->
-  $("#new_payment").on("ajax:success", (e, data, status, xhr) ->
-    $("#new_payment").append xhr.responseText
+  $("#stripeform").submit("ajax:success", (e, data, status, xhr) ->
+    $("#stripeform").append xhr.responseText
   ).on "ajax:error", (e, xhr, status, error) ->
-    $("#new_payment").append "<p>ERROR</p>"
+    $("#stripeform").append "<p>ERROR</p>"
