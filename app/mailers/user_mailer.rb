@@ -10,7 +10,6 @@ class UserMailer < ActionMailer::Base
   end
 
   def payment(email, message)
-  	@message = "Thank you for your purchase!"
   	mail(:from => 'shop@ArubaKiteboarding.com',
   				:to => email,
   				:subject => "ArubaKiteboarding Store")

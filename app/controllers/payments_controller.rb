@@ -18,6 +18,7 @@ class PaymentsController < ApplicationController
 
     order = Order.create(product_id: product, user_id: current_user, total: charge.amount)
     @email = params[:email]
+    @message = "Thank for your order!"
     UserMailer.payment(@email, message).deliver
     #redirect_to order_url(order), notice: "You order has been processed"
 
