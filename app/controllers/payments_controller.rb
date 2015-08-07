@@ -4,21 +4,21 @@ class PaymentsController < ApplicationController
 
 	def create
     token = params[:stripeToken]
-    product = Product.find(params[:product_id])
+    @product = Product.find(params[:product_id])
 
   # Create the charge on Stripe's servers - this will charge the user's card
     begin
       charge = Stripe::Charge.create(
-        :amount => product.price_in_cents, # amount in cents
-        :currency => "usd",
+        :amount => (@product.price * 100).to_i, # amount in cents
+        :currency => "USD",
         :source => token,
         :email => params[:email],
-        :description => product.name,
+        :description => @product.name,
     )
 
     @order = Order.create!(product_id: @product, user_id: current_user, total: charge.amount)
-    @message = "Thank for your order!"
-    UserMailer.payment(@email, @message).deliver
+    
+    UserMailer.payment(@email, @product).deliver
     #redirect_to order_url(order), notice: "You order has been processed"
 
     rescue Stripe::CardError => e
