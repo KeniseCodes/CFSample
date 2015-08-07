@@ -36,6 +36,7 @@ gem 'factory_girl_rails'
 gem 'stripe'
 gem 'dalli'
 gem 'memcachier'
+gem 'redis-rails' 
 
 
 group :development, :test do

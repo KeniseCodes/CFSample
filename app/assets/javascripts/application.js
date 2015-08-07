@@ -25,13 +25,6 @@ $(document).on('ready page:load', function(){
 		}
 	});
 
-	$.ajax({
-  success: function(e,data, status, xhr){ alert('Success!')
-   },
-  error: function(e, xhr, status, error){ alert('Error!')
-   }
-}); 
-
 	$('textarea').autoExpand();
 
 });
