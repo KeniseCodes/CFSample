@@ -9,4 +9,11 @@ class UserMailer < ActionMailer::Base
 	  		:subject => "A new contact form message from #{name}")
   end
 
+  def payment(email, message)
+  	@message = "Thank you for your purchase!"
+  	mail(:from => 'shop@ArubaKiteboarding.com',
+  				:to => email,
+  				:subject => "ArubaKiteboarding Store")
+  end
+
 end
