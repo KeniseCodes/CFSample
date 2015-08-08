@@ -17,4 +17,4 @@ This was a fun project. I learned a lot of things and now that some time has pas
 
 -- Kenise :-)
   
-[link]: http://arubakiteboarding.herokuapp.com
+[link here]: http://arubakiteboarding.herokuapp.com
