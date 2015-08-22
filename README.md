@@ -1,3 +1,20 @@
-# CFSample
+# Aruba Kiteboarding - [link here]
 
-This app was created as a part of my Career Foundry Full Stack Web Developer Course. I can't say what it is really about yet. I'm sure I will edit this as I continue to develop the application. I'm a newbie so don't be too harsh. :-)
+This is my first app. Created as a part of my Career Foundry Full Stack Web Developer Course. 
+This is a demo site of an online Kiteboarding store. There is still a bit of work to be done to clean it up.....
+
+## Features
+  * Feature Page with image carousel
+  * Search function inside menu bar
+  * Product list with images
+  * Devise user authentification
+  * Commenting (raty.js) and pagination of products
+  * Payment button using Stripe
+  * Along with a splash of other functions and abilites.
+  
+------
+This was a fun project. I learned a lot of things and now that some time has passed I aim to continue to improve the code found here. Hopefully one day it will great. Thanks for stopping by.
+
+-- Kenise :-)
+  
+[link here]: http://arubakiteboarding.herokuapp.com
