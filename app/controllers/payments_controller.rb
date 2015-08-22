@@ -6,6 +6,7 @@ class PaymentsController < ApplicationController
     token = params[:stripeToken]
     @product = Product.find(params[:product_id])
     @email = params[:stripeEmail]
+    @user = current_user
 
   # Create the charge on Stripe's servers - this will charge the user's card
     begin
@@ -17,7 +18,7 @@ class PaymentsController < ApplicationController
         :description => @product.name,
     )
 
-    @order = Order.create!(product: @product, user: current_user, total: charge.amount)
+    @order = Order.create!(product: @product, user: @user, total: charge.amount)
     
     UserMailer.payment(@email, @product).deliver
     #redirect_to order_url(order), notice: "You order has been processed"

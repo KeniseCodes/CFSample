@@ -20,8 +20,8 @@ load_and_authorize_resource
 	end
 
 	def create 
-	#3@product = Product.find(params[:product_id])
-	 # @user = current_user
+	@product = Product.find(params[:product_id])
+	 @user = current_user
 		#@order = Order.new(params[:order])
 		#@order.save
 	end

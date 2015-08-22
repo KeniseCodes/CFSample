@@ -3,7 +3,7 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
 $(document).ready ->
-   $("#new_payment").on("ajax:success", (e, data, status, xhr) ->
-   	$("#new_payment").append "<p>Payment Complete!</p>"
+   $("#new_payment").on("ajax:complete", (e, data, status, xhr) ->
+   	$("#notice").append "<p>Payment Complete!</p>"
   	).on "ajax:error", (e, xhr, status, error) ->
-    	$("#new_payment").append "<p>ERROR</p>"
+    	$("#notice").append "<p>ERROR</p>"

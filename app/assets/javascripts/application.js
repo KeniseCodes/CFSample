@@ -27,4 +27,10 @@ $(document).on('ready page:load', function(){
 
 	$('textarea').autoExpand();
 
+	$.ajax({
+  success: function(e,data, status, xhr){ alert('Success!')
+   },
+  error: function(e, xhr, status, error){ alert('Error!')
+   }
+
 });

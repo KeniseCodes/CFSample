@@ -18,8 +18,8 @@
 			</p>
 			<p>Average rating: <div class="rated" data-score="<%= @product.average_rating %>"></div></p>
 			<p>
-				<%= form_tag "/payments/create" do %>
-  			<%= render partial: "shared/stripe_checkout_button", locals: {product: @product} %>
+				<%= form_tag "/payments/create", remote: true, id: 'new_payment' do %>
+  				<%= render partial: "shared/stripe_checkout_button", locals: {product: @product} %>
 				<% end %>
 				<%= yield %>
 			</p>
